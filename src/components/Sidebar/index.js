@@ -1,5 +1,5 @@
 import './Sidebar.css';
-import User from '../containers/User';
+import User from '../../containers/User';
 
 function Sidebar({contacts}) {
   return (
