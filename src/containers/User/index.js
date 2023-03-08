@@ -5,7 +5,6 @@ import {setActiveUserId} from '../../actions';
 function User({user}) {
   const {name, profile_pic, status} = user;
   const handleUserClick = ({user_id}) => {
-    console.log(user_id);
     store.dispatch(setActiveUserId(user_id));
   };
   return (
