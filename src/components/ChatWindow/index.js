@@ -1,4 +1,5 @@
 import Chats from '../Chats';
+import MessageInput from '../MessageInput';
 import './ChatWindow.css';
 import store from '../../store';
 import _ from 'lodash';
@@ -13,19 +14,17 @@ const Header = ({user}) => {
   );
 };
 
-const MessageInput = () => {
-  return <div>MessageInput</div>;
-};
-
 function ChatWindow({activeUserId}) {
   const state = store.getState();
   const activeUser = state.contacts[activeUserId];
   const activeUserMessages = _.values(state.messages[activeUserId]);
+  const inputValue = state.typing;
+  console.log(state.typing);
   return (
     <div className="ChatWindow">
       <Header user={activeUser} />
       <Chats messages={activeUserMessages} />
-      <MessageInput />
+      <MessageInput value={inputValue} />
     </div>
   );
 }
