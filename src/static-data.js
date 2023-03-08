@@ -32,7 +32,7 @@ export function generateUser() {
   return {
     name: faker.name.findName(),
     email: faker.internet.email(),
-    profile_pic: faker.internet.avatar(),
+    profile_pic: '',
     status: txtgen.sentence(),
     user_id: shortid.generate(),
   };
