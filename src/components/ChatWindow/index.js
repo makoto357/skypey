@@ -1,5 +1,5 @@
 import './ChatWindow.css';
-function ChatWindow() {
+function ChatWindow({activeUserId}) {
   return <div className="ChatWindow">ChatWindow</div>;
 }
 
