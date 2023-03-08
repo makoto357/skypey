@@ -1,5 +1,7 @@
+import Chats from '../Chats';
 import './ChatWindow.css';
 import store from '../../store';
+import _ from 'lodash';
 
 const Header = ({user}) => {
   const {name, status} = user;
@@ -11,9 +13,6 @@ const Header = ({user}) => {
   );
 };
 
-const Chats = () => {
-  return <div>chats</div>;
-};
 const MessageInput = () => {
   return <div>MessageInput</div>;
 };
@@ -21,11 +20,11 @@ const MessageInput = () => {
 function ChatWindow({activeUserId}) {
   const state = store.getState();
   const activeUser = state.contacts[activeUserId];
-  console.log(state);
+  const activeUserMessages = _.values(state.messages[activeUserId]);
   return (
     <div className="ChatWindow">
       <Header user={activeUser} />
-      <Chats />
+      <Chats messages={activeUserMessages} />
       <MessageInput />
     </div>
   );

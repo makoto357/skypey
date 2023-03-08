@@ -1,3 +1,9 @@
+.ChatWindow {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .Header {
   padding: 1rem 2rem;
   border-bottom: 1px solid rgba(189, 189, 192, 0.2);
