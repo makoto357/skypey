@@ -1,4 +1,4 @@
-import Chats from '../Chats';
+import Chats from '../../components/Chats';
 import MessageInput from '../MessageInput';
 import './ChatWindow.css';
 import store from '../../store';
@@ -19,7 +19,7 @@ function ChatWindow({activeUserId}) {
   const activeUser = state.contacts[activeUserId];
   const activeUserMessages = _.values(state.messages[activeUserId]);
   const inputValue = state.typing;
-  console.log(state.typing);
+  console.log(state.typing, state);
   return (
     <div className="ChatWindow">
       <Header user={activeUser} />

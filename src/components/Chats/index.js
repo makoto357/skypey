@@ -6,6 +6,7 @@ const Chat = ({message}) => {
 };
 
 const Chats = ({messages}) => {
+  console.log(messages);
   return (
     <div className="Chats">
       {messages.map(message => (

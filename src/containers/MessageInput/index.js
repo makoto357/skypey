@@ -6,7 +6,7 @@ const MessageInput = ({value}) => {
   const {activeUserId, typing} = state;
   const handleSubmit = e => {
     e.preventDefault();
-    store.dispatch(setMessage(activeUserId, typing));
+    store.dispatch(setMessage(typing, activeUserId));
   };
   const handleChange = e => {
     store.dispatch(setTypingValue(e.target.value));
